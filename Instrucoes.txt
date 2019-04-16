@@ -1,3 +1,5 @@
+Esse script deverá ser executado no Ubuntu ou Debian.
+
 Instalar wget
 apt-get install wget
 
