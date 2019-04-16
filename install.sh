@@ -68,6 +68,33 @@ if ! docker container run -d -p 80:80 -e DB_SERVER_HOST=$ip -e DB_SERVER_PORT=33
  	echo "Nao foi possivel instalar zabbix web."
     exit 1
 fi
-	
+
+##################################### INSTALACAO API CORREIOS ###################################
+
+
+echo "Criando diretorio para instalacao do nginx..."
+if ! mkdir -p /docker-nginx/html
+then
+    echo "Não foi possível criar o diretorio."
+    exit 1
+fi
+echo "Diretorio criado com sucesso!"
+
+echo "Efetuando download da pagina..."
+if ! wget -c -P /docker-nginx/html https://raw.githubusercontent.com/faelvinicius/zabbix/master/index.html
+then
+    echo "Não foi possível efetuar o download."
+    exit 1
+fi
+
+echo "Instalando nginx"
+if ! docker run --name api-correios3 -p 7676:80 -d -v /docker-nginx/html:/usr/share/nginx/html nginx
+then
+    echo "Não foi possível instalar o nginx."
+    exit 1
+fi
+
+
 echo "Instalação finalizada com sucesso"
 echo "Basta acessar pelo browser o seguinte endereço $ip "
+echo "Para acessar a busca de CEP dos Correios basta acessar pelo browser o seguinte endereço: $ip:7676"
