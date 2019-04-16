@@ -1,6 +1,4 @@
-# zabbix
-
-Esse script deverá ser executado no Ubuntu ou Debian.
+# Instalação Zabbix + busca de CEP correios no Ubuntu.
 
 Instalar wget
 apt-get install wget
