@@ -1,7 +1,7 @@
 #!/bin/bash
 
-
-echo Atualizando repositórios..
+echo "Iniciando a instalacao do Zabbix..."
+echo "Atualizando repositórios..."
 if ! apt-get update
 then
     echo "Não foi possível atualizar os repositórios. Verifique seu arquivo /etc/apt/sources.list"
@@ -52,4 +52,5 @@ then
     exit 1
 
 	
-echo "Instalação finalizada"
+echo "Instalação finalizada com sucesso"
+echo "Basta acessar pelo browser o seguinte endereço $ip "
