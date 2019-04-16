@@ -33,6 +33,7 @@ then
     exit 1
 fi    
 	echo "Diretorio criado com sucesso!"
+	
 echo "Digite o IP do para prosseguir com a instalacao do MYSQL..."
 read ip
 if ! docker container run -d -p 3306:3306 -v /zbx-server/mysql/data:/var/lib/mysql -e MYSQL_HOST=$ip -e MYSQL_USER=zabbix -e MYSQL_ROOT_PASSWORD=zabbix -e MYSQL_DATABASE=zabbix -e MYSQL_PASSWORD=zabbix --name mysql-zbx mysql:5.7
