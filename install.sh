@@ -13,9 +13,9 @@ fi
 echo "Atualização feita com sucesso"
 
 
-#################################### ATUALIZANDO CURL #####################################
+#################################### ATUALIZANDO CURL e WGET ###############################
 echo "Instalando o curl..."
-if ! apt-get install curl -y
+if ! apt-get install curl && wget -y
 then
     echo "Não foi possível instalar o curl."
     exit 1
