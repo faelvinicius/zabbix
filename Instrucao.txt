@@ -1,0 +1,7 @@
+Usando wget - Executar no terminal
+wget -qO- https://raw.githubusercontent.com/faelvinicius/zabbix/master/zabbix_correios.sh | bash
+
+OU
+
+Usando curl - Executar no terminal
+curl -fsSL https://raw.githubusercontent.com/faelvinicius/zabbix/master/zabbix_correios.sh | bash
