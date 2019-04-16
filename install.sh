@@ -23,8 +23,6 @@ then
     echo "Não foi possível instalar o docker."
     exit 1
 fi
-echo "Instalação do docker feita com sucesso"
-
 
 echo "Criando diretorio para instalacao do MYSQL..."
 if ! mkdir -p /zbx-server/mysql/data
