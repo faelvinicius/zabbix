@@ -25,8 +25,6 @@ then
 fi
 echo "Instalação do docker feita com sucesso"
 
-
-
 echo "Criando diretorio para instalacao do MYSQL..."
 if ! mkdir -p /zbx-server/mysql/data
 then
@@ -50,7 +48,6 @@ then
 	   echo "Nao foi possivel instalar Zabbix Server."
   	   exit 1	
 fi
-
 
 echo "Digite o IP do HOST para prosseguir a instalacao do zabbix web..."
 read ip
