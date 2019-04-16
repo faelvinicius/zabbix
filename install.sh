@@ -32,7 +32,7 @@ then
     echo "Não foi possível criar o diretorio."
     exit 1
 fi    
-
+	echo "Diretorio criado com sucesso!"
 echo "Digite o IP do para prosseguir com a instalacao do MYSQL..."
 read ip
 if ! docker container run -d -p 3306:3306 -v /zbx-server/mysql/data:/var/lib/mysql -e MYSQL_HOST=$ip -e MYSQL_USER=zabbix -e MYSQL_ROOT_PASSWORD=zabbix -e MYSQL_DATABASE=zabbix -e MYSQL_PASSWORD=zabbix --name mysql-zbx mysql:5.7
@@ -40,6 +40,7 @@ then
 	echo "Nao foi possivel instalar o MYSQL."
     exit 1
 fi
+	echo "MYSQL instalado com sucesso!"
 
 echo " Digite o IP do HOST para prosseguir a instalacao do Zabbix Server..."
 read ip
@@ -48,6 +49,7 @@ then
 	echo "Nao foi possivel instalar Zabbix Server."
   exit 1	
 fi
+	echo "Zabbix server instalado com sucesso!"
 
 echo "Digite o IP do HOST para prosseguir a instalacao do zabbix web..."
 read ip
