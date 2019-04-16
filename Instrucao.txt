@@ -1,7 +1,11 @@
-Usando wget - Executar no terminal
-wget -qO- https://raw.githubusercontent.com/faelvinicius/zabbix/master/zabbix_correios.sh | bash
+Instalar wget
+apt-get install wget
 
-OU
+Em seguinda efetuar o download com o comando abaixo
+wget https://raw.githubusercontent.com/faelvinicius/zabbix/master/install.sh
 
-Usando curl - Executar no terminal
-curl -fsSL https://raw.githubusercontent.com/faelvinicius/zabbix/master/zabbix_correios.sh | bash
+Após efetuar download, executar o seguinte comando:
+./install.sh
+
+Durante a instalação será solicitado que você digite o ip do host em que está sendo executado o script.
+Para verificar o IP basta digitar o seguinte comando ifconfig -a
