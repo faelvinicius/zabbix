@@ -14,6 +14,6 @@ Em seguinda executar o script
 
 ./install.sh
 
-# Durante a instalação será solicitado que você digite o ip do host em que está sendo executado o script.
+Durante a instalação será solicitado que você digite o ip do host em que está sendo executado o script.
 
 Para verificar o IP basta digitar o seguinte comando ifconfig -a
