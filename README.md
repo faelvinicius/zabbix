@@ -22,7 +22,6 @@ Após instalado, basta acessar o zabbix pelo browser digitando endereço IP que 
 http://ip_informado
 
 Login: Admin
-
 Senha: zabbix
 
 
