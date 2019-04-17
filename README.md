@@ -21,7 +21,7 @@ Para verificar o IP basta digitar o seguinte comando ifconfig -a
 Após instalado, basta acessar o zabbix pelo browser digitando endereço IP que foi informado na instalação.
 http://ip_informado
 
-Login: Admin
+Login: Admin 
 Senha: zabbix
 
 
