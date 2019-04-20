@@ -1,27 +1,20 @@
-Esse script deverá ser executado no Ubuntu ou Debian.
 
-Instalar wget
-sudo apt-get install wget
+A instalação do ambiente e feita através do Vagrant + Virtualbox.
 
-Em seguinda efetuar o download com o comando abaixo
-sudo wget https://raw.githubusercontent.com/faelvinicius/zabbix/master/install.sh
+Após instalar o virtualbox e o vagrant, deverá ser criao um diretório com o nome do seu projeto.
 
-Após efetuar download, executar o seguinte comando deverá dar permissão de execução ao arquivo install.sh com o seguinte comando:
+Em seguida deverá baixar o arquivo vagrantfile e salvar o arquivo dentro do diretório que foi criado.
 
-sudo chmod +x install.sh
+Pará que o ambiente seja configurando, basta digitar o seguinte comando no terminal ou powershell se estiver utilizando windows.
+vagrant up
 
-Em seguinda executar o script
+É só aguardar e o ambiente está configurado.
 
-sudo ./install.sh
-
-Durante a instalação será solicitado que você digite o ip do host em que está sendo executado o script.
-
-Para verificar o IP basta digitar o seguinte comando ifconfig -a
 
 Após instalado, basta acessar o zabbix pelo browser digitando endereço IP que foi informado na instalação.
 http://ip_informado
 
-Login: Admin
+Login: Admin 
 Senha: zabbix
 
 
