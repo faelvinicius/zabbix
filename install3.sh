@@ -49,5 +49,5 @@ docker run -d \
   -e ZBX_SERVER_HOST=$SERVER_IP \
   -e PHP_TZ="UTC" \
   -p 80:80 \
-  -p443:443 \
+  -p 443:443 \
   zabbix/zabbix-web-nginx-mysql:ubuntu-3.4-latest
