@@ -1,0 +1,20 @@
+Vagrant.configure(2) do |config|
+        config.vm.box = "debian/jessie64"
+        config.vm.hostname = "srvprova"
+        config.vm.network "forwarded_port", guest: 80, host: 80
+        config.vm.network "forwarded_port", guest: 7676, host: 7676
+        config.vm.network "public_network", ip: "127.0.0.1"
+        config.vm.provider "virtualbox" do |vb|
+                vb.memory = "2048"
+                vb.cpus = "1"
+                vb.name = "srvprova"
+end
+        config.vm.provision "shell", inline: <<-SHELL
+                sudo apt-get update
+                sudo apt-get install curl -y
+                sudo curl -fsSL https://get.docker.com | bash
+                sudo curl -fsSL https://raw.githubusercontent.com/faelvinicius/zabbix/master/install.sh | bash
+         SHELL
+
+end
+~      
