@@ -7,7 +7,7 @@ Após instalar o virtualbox e o vagrant, deverá ser criao um diretório com o n
 Em seguida deverá baixar o arquivo vagrantfile e salvar o arquivo dentro do diretório que foi criado.
 
 Pará que o ambiente seja configurando, basta digitar o seguinte comando no terminal ou powershell se estiver utilizando windows.
-vagrant up
+#vagrant up
 
 É só aguardar e o ambiente está configurado.
 
