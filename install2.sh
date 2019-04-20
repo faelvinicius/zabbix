@@ -64,5 +64,5 @@ then
 fi
 
 echo "Instalação finalizada com sucesso"
-echo "Basta acessar pelo browser o seguinte endereço 127.0.0.1 "
+echo "Para acessar o Zabbix, basta acessar pelo browser o seguinte endereço 127.0.0.1 "
 echo "Para acessar a busca de CEP dos Correios basta acessar pelo browser o seguinte endereço: 127.0.0.1:7676"
