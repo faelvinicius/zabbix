@@ -32,7 +32,7 @@ fi
 
 ###################################### BAIXANDO CONTAINER ZABBIX WEB ###########################
 
-if ! docker container run -d -e DB_SERVER_HOST=127.0.0.1 -e DB_SERVER_PORT=3306 -e MYSQL_USER=zabbix -e MYSQL_PASSWORD=zabbix -e MYSQL_DATABASE=zabbix -e ZBX_SERVER_HOST=127.0.0.1 -e PHP_TZ=America/Sao_Paulo --name zbx-web zabbix/zabbix-web-apache-mysql:ubuntu-4.0-latest
+if ! docker container run -d -p 80:80 -e DB_SERVER_HOST=127.0.0.1 -e DB_SERVER_PORT=3306 -e MYSQL_USER=zabbix -e MYSQL_PASSWORD=zabbix -e MYSQL_DATABASE=zabbix -e ZBX_SERVER_HOST=127.0.0.1 -e PHP_TZ=America/Sao_Paulo --name zbx-web zabbix/zabbix-web-apache-mysql:ubuntu-4.0-latest
  then
  	echo "Nao foi possivel instalar zabbix web."
     exit 1
